@@ -14,15 +14,16 @@ export default function Home() {
         <p>Взрываем астероиды с 1998 года.</p>
       </header>
       <main className={styles.main}>
-        MAIN BLOCK
-        <Image
-          className={styles.logo}
-          src="/earth.webp"
-          alt="Earth"
-          width={1000}
-          height={1000}
-          priority
-        />
+        <h2>MAIN BLOCK</h2>
+        <div className={styles['logo-container']}>
+          <Image
+            className={styles.logo}
+            src="/earth.webp"
+            alt="Earth locating on the left path of content"
+            width={1450}
+            height={1450}
+          />
+        </div>
       </main>
       <footer className={styles.footer}>© Все права и планета защищены</footer>
     </div>
