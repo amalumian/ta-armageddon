@@ -32,20 +32,6 @@
   transform: translate(-100%, -50%);
   z-index: -1;
   height: 60svh;
-  animation-duration: 2s;
-  animation-name: slidein;
-}
-
-@keyframes slidein {
-  from {
-  transform: translate(-150%, -50%);
-  opacity: 0;
-  }
-
-  to {
-  transform: translate(-100%, -50%);
-  opacity: 1;
-  }
 }
 
 .logo {
