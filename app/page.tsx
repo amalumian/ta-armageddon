@@ -14,7 +14,10 @@ export default function Home() {
         <p>Взрываем астероиды с 1998 года.</p>
       </header>
       <main className={styles.main}>
-        <h2>MAIN BLOCK</h2>
+        <h2>Ближайшие подлёты астероидов</h2>
+        <div>Block for filter</div>
+        <div>Block for list</div>
+        <div>Block for cart</div>
         <div className={styles['logo-container']}>
           <Image
             className={styles.logo}
