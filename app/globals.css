@@ -1,6 +1,7 @@
 :root {
   --background: #000000;
   --foreground: #FFFFFF;
+  --color-primary: #F86600;
 }
 
 html,
@@ -10,6 +11,10 @@ body {
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100svh;
+  padding: 16px;
   color: var(--foreground);
   background: var(--background);
   font-family: Helvetica, sans-serif;
