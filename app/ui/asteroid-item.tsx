@@ -56,7 +56,7 @@ export default function AsteroidItem({
       <div className={styles.asteroid__order}>
         <button
           className={clsx(styles.order__button, {
-            [styles.order__button_active]: isInCart
+            [styles.order__button_active]: isInCart,
           })}
           onClick={() =>
             handleCart({
