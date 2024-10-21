@@ -1,7 +1,10 @@
 :root {
   --background: #000000;
   --foreground: #FFFFFF;
-  --color-primary: #F86600;
+  --color-primary: rgba(248, 102, 0, 1);
+  --color-primary-dimmed: rgba(248, 102, 0, 0.15);
+  --color-grey: #E3E5E5;
+  --color-beige: #F5DED9;
 }
 
 html,
@@ -39,4 +42,12 @@ h1 {
 
 h2 {
   font-size: 28px;
+  margin-bottom: 24px;
+}
+
+button {
+  background-color: transparent;
+  color: inherit;
+  border: none;
+  cursor: pointer;
 }
