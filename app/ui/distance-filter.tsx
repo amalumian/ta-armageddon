@@ -1,17 +1,34 @@
-type FilterProps = {
-  onDistanceFilter: (unit: 'km' | 'lunar') => void;
-};
+import clsx from 'clsx'
 
-export default function DistanceFilter({ onDistanceFilter }: FilterProps) {
+import styles from './distance-filter.module.css'
+
+type FilterProps = {
+  onDistanceFilter: (unit: 'km' | 'lunar') => void
+  distanceUnit: 'km' | 'lunar'
+}
+
+export default function DistanceFilter({ onDistanceFilter, distanceUnit }: FilterProps) {
   return (
-    <div>
-      <button type="button" onClick={() => onDistanceFilter('km')}>
+    <div className={styles.filter}>
+      <button
+        className={clsx(styles.filter__button, {
+          [styles.filter__button_active]: distanceUnit === 'km',
+        })}
+        type='button'
+        onClick={() => onDistanceFilter('km')}
+      >
         в километрах
-      </button>{' '}
-      |{' '}
-      <button type="button" onClick={() => onDistanceFilter('lunar')}>
+      </button>
+      <div className={styles.filter__separator}></div>
+      <button
+        className={clsx(styles.filter__button, {
+          [styles.filter__button_active]: distanceUnit === 'lunar',
+        })}
+        type='button'
+        onClick={() => onDistanceFilter('lunar')}
+      >
         в лунных орбитах
       </button>
     </div>
-  );
+  )
 }

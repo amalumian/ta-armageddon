@@ -1,0 +1,32 @@
+.filter {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+  position: relative;
+}
+
+.filter__button {
+  text-decoration: underline;
+  font-size: 16px;
+}
+
+.filter__button:hover {
+  color: var(--color-primary)
+}
+
+.filter__button_active {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.filter__separator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 4px;
+  width: 1px;
+  height: 14px;
+  position: relative;
+  background-color: white;
+
+}
