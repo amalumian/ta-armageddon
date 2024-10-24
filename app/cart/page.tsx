@@ -3,7 +3,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
-import clsx from 'clsx'
 
 import { useCart } from '../lib/context/cart-context'
 import styles from './page.module.css'
