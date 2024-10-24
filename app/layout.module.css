@@ -13,8 +13,8 @@
   display: flex;
   flex-direction: column;
   margin: 32px auto;
-  max-width: 400px;
-  width: 400px;
+  max-width: 310px;
+  width: 310px;
 }
 
 .logo-container {
@@ -23,6 +23,7 @@
   transform: translate(-100%, -50%);
   z-index: -1;
   height: 60svh;
+  padding-right: 24px;
 }
 
 .logo {
@@ -36,4 +37,3 @@
 .footer {
   text-align: center;
 }
-
