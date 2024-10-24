@@ -1,9 +1,12 @@
 'use client'
 
 import Link from 'next/link'
-import { useCart } from '../lib/context/cart-context'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
+import clsx from 'clsx'
+
+import { useCart } from '../lib/context/cart-context'
+import styles from './page.module.css'
 
 export default function Page() {
   const { cart, clearCart } = useCart()
@@ -19,14 +22,34 @@ export default function Page() {
     <>
       <h2>Заказ отправлен!</h2>
       {copyCart.map((asteroid) => (
-        <div key={asteroid.id}>
-          <h3>{asteroid.date}</h3>
-          <div>{asteroid.distance}</div>
-          <div>---------</div>
-          <Image src='/asteroid.webp' width='37' height='40' alt='Asteroid' priority />
-          <Link href={`/${asteroid.id}`}>{asteroid.name}</Link>
-          <div>Ø {asteroid.diameter}</div>
-          {asteroid.isHazardous && <div>⚠️ Опасен</div>}
+        <div key={asteroid.id} className={styles['asteroid__item']}>
+          <h3 className={styles.asteroid__heading}>{asteroid.date}</h3>
+          <div className={styles.asteroid__description}>
+            <div className={styles.asteroid__distance}>
+              <div className={styles.distance__value}>{asteroid.distance}</div>
+              <Image
+                className={styles.distance__arrow}
+                src='/arrow.webp'
+                width='105'
+                height='6'
+                alt='Asteroid'
+              />
+            </div>
+            <Image
+              className={styles.asteroid__picture}
+              src='/asteroid.webp'
+              width={parseInt(asteroid.diameter, 10) > 100 ? 37 : 22}
+              height={parseInt(asteroid.diameter, 10) > 100 ? 40 : 24}
+              alt='Asteroid'
+            />
+            <div className={styles.asteroid__details}>
+              <Link className={styles.details__name} href={`/${asteroid.id}`}>
+                {asteroid.name}
+              </Link>
+              <div className={styles.details__diameter}>Ø {asteroid.diameter}</div>
+            </div>
+          </div>
+          {asteroid.isHazardous && <div className={styles.order__hazardous}>⚠️ Опасен</div>}
         </div>
       ))}
     </>
