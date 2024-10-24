@@ -1,4 +1,43 @@
 .cart {
   position: fixed;
-  transform: translateX(400px);
+  display: flex;
+  flex-direction: column;
+  border-radius: 24px;
+  padding: 16px;
+  background-color: var(--color-grey-dark);
+  transform: translateX(350px);
+}
+
+.cart__info {}
+
+.cart__heading {
+  margin-bottom: 4px;
+}
+
+.cart__asteroids-count {
+  margin-bottom: 32px;
+}
+
+.cart__order {
+  border-radius: 40px;
+  padding: 12px 16px;
+  background-color: var(--color-primary);
+}
+
+@media (max-width: 800px) {
+  .cart {
+    bottom: 0;
+    left: 0;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    transform: translateX(0);
+    border-radius: 0;
+  }
+
+  .cart__asteroids-count {
+    margin-bottom: 0;
+
+  }
 }
