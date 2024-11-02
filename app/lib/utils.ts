@@ -22,7 +22,6 @@ export const getDates = () => {
   const startDate = formatDateToISO(today)
 
   const nextWeekDay = new Date()
-  nextWeekDay.setDate(today.getDate() + 7)
   const endDate = formatDateToISO(nextWeekDay)
 
   return { startDate, endDate }

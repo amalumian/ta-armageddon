@@ -1,25 +1,23 @@
 import { formatDateToISO } from './utils'
 import { API_FEED, API_LOOKUP } from './api'
 
-export const fetchAsteroids = async () => {
-  const response = await fetch(API_FEED)
+export const fetchAsteroids = async (startDate = new Date(), endDate = new Date()) => {
+  const formattedStartDate = formatDateToISO(startDate)
+  const formattedEndDate = formatDateToISO(endDate)
+
+  const response = await fetch(
+    `${API_FEED}&start_date=${formattedStartDate}&end_date=${formattedEndDate}`,
+  )
+  console.log(response)
   const data = await response.json()
 
   const asteroidsRaw = data.near_earth_objects
-  const asteroidCount = data.element_count
-
-  const asteroidDates = Object.keys(asteroidsRaw).map((date) => new Date(date))
-  const sortedAsteroidDates = asteroidDates
-    .slice()
-    .sort((a, b) => a.getTime() - b.getTime())
-    .map((date) => formatDateToISO(date))
-
-  const asteroids = sortedAsteroidDates.map((asteroidDate) => ({
-    date: asteroidDate,
-    data: asteroidsRaw[asteroidDate],
+  const newAsteroids = Object.keys(asteroidsRaw).map((date) => ({
+    date,
+    data: asteroidsRaw[date],
   }))
 
-  return { asteroids, asteroidCount }
+  return { newAsteroids, startDate: formattedStartDate, endDate: formattedEndDate }
 }
 
 export const fetchAsteroid = async (id: string) => {
