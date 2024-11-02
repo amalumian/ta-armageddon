@@ -19,8 +19,8 @@ Armageddon is an online service for monitoring and ordering the destruction of h
 
 ```bash
 
-git clone <repository-url>
-cd <repository-folder>
+git clone https://github.com/amalumian/ta-armageddon.git
+cd ta-armageddon
 
 ```
 
