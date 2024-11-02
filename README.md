@@ -2,7 +2,7 @@
 
 ?GitHub Actions Tests Status?
 
-Armageddon is an online service for monitoring and ordering the destruction of hazardous asteroids based on data from NASA's NeoWs API. The application provides detailed information on asteroid flybys near Earth, with infinite scrolling, filtering options, and the ability to place orders for specific asteroids directly to a cart. Each asteroid has a dedicated page with comprehensive flyby details.
+Armageddon is an online service for monitoring and ordering the destruction of hazardous asteroids based on data from NASA's [NeoWs API](https://api.nasa.gov/). The application provides detailed information on asteroid flybys near Earth, with infinite scrolling, filtering options, and the ability to place orders for specific asteroids directly to a cart. Each asteroid has a dedicated page with comprehensive flyby details.
 
 ## Features
 
