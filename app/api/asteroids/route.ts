@@ -14,7 +14,6 @@ export async function GET(request: NextRequest) {
 
   const formattedStartDate = formatDateToISO(new Date(startDate))
   const formattedEndDate = formatDateToISO(new Date(endDate))
-  console.log(formattedEndDate)
 
   const response = await fetch(
     `${API_FEED}&start_date=${formattedStartDate}&end_date=${formattedEndDate}`,

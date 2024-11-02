@@ -8,7 +8,6 @@ export const fetchAsteroids = async (startDate = new Date(), endDate = new Date(
   const response = await fetch(
     `${API_FEED}&start_date=${formattedStartDate}&end_date=${formattedEndDate}`,
   )
-  console.log(response)
   const data = await response.json()
 
   const asteroidsRaw = data.near_earth_objects
