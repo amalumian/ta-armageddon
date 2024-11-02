@@ -1,6 +1,6 @@
 import clsx from 'clsx'
 
-import styles from './distance-filter.module.css'
+import styles from '@/app/ui/distance-filter.module.css'
 
 type FilterProps = {
   onDistanceFilter: (unit: 'km' | 'lunar') => void

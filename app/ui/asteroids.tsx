@@ -4,11 +4,11 @@ import { useState, useEffect, useCallback } from 'react'
 
 import { AsteroidsType } from '@/app/lib/definitions'
 import { formatDateToISO } from '@/app/lib/utils'
-import DistanceFilter from './distance-filter'
-import Cart from './cart'
-import AsteroidList from './asteroid-list'
-import Loader from './loader'
-import { useStorageState } from '../lib/hooks/useStorageState'
+import DistanceFilter from '@/app/ui/distance-filter'
+import Cart from '@/app/ui/cart'
+import AsteroidList from '@/app/ui/asteroid-list'
+import Loader from '@/app/ui/loader'
+import { useStorageState } from '@/app/lib/hooks/useStorageState'
 
 type AsteroidsProps = {
   initialAsteroids: AsteroidsType

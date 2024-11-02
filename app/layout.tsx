@@ -1,11 +1,11 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
+import Link from 'next/link'
 
 import { passionOne } from '@/app/ui/fonts'
 import '@/app/globals.css'
 import styles from '@/app/layout.module.css'
-import Link from 'next/link'
-import { CartProvider } from './lib/context/cart-context'
+import { CartProvider } from '@/app/lib/context/cart-context'
 
 export const metadata: Metadata = {
   title: 'ARMAGEDDON',

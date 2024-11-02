@@ -1,5 +1,5 @@
-import { formatDateToISO } from './utils'
-import { API_FEED, API_LOOKUP } from './api'
+import { formatDateToISO } from '@/app/lib/utils'
+import { API_FEED, API_LOOKUP } from '@/app/lib/api'
 
 export const fetchAsteroids = async (startDate = new Date(), endDate = new Date()) => {
   const formattedStartDate = formatDateToISO(startDate)

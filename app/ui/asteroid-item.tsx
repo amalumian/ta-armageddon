@@ -2,8 +2,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 import clsx from 'clsx'
 
-import { useCart } from '../lib/context/cart-context'
-import styles from './asteroid-item.module.css'
+import { useCart } from '@/app/lib/context/cart-context'
+import styles from '@/app/ui/asteroid-item.module.css'
 
 type AsteroidItemProps = {
   date: string

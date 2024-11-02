@@ -1,7 +1,7 @@
 import { useRouter } from 'next/navigation'
 
-import { useCart } from '../lib/context/cart-context'
-import styles from './cart.module.css'
+import { useCart } from '@/app/lib/context/cart-context'
+import styles from '@/app/ui/cart.module.css'
 
 const getAsteroidWord = (count: number): string => {
   if (count % 10 === 1 && count % 100 !== 11) {

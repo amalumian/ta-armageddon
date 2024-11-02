@@ -4,10 +4,9 @@ import {
   formatDistanceInKm,
   formatDistanceInLunar,
 } from '@/app/lib/utils'
-import AsteroidItem from './asteroid-item'
-
+import AsteroidItem from '@/app/ui/asteroid-item'
 import { AsteroidsType } from '@/app/lib/definitions'
-import styles from './asteroid-list.module.css'
+import styles from '@/app/ui/asteroid-list.module.css'
 
 type AsteroidListProps = {
   asteroids: AsteroidsType

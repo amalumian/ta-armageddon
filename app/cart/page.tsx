@@ -4,8 +4,8 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
 
-import { useCart } from '../lib/context/cart-context'
-import styles from './page.module.css'
+import { useCart } from '@/app/lib/context/cart-context'
+import styles from '@/app/cart/page.module.css'
 
 export default function Page() {
   const { cart, clearCart } = useCart()

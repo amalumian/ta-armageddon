@@ -1,7 +1,7 @@
-import { fetchAsteroid } from '../lib/data'
-import { AsteroidType } from '../lib/definitions'
-import { formatDate } from '../lib/utils'
-import styles from './page.module.css'
+import { fetchAsteroid } from '@/app/lib/data'
+import { AsteroidType } from '@/app/lib/definitions'
+import { formatDate } from '@/app/lib/utils'
+import styles from '@/app/[id]/page.module.css'
 
 export default async function Page({ params }: { params: { id: string } }) {
   const asteroid: AsteroidType = await fetchAsteroid(params.id)
